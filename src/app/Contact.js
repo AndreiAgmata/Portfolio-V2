@@ -11,7 +11,7 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
-    phoneNumber: "",
+    phone: "",
     email: "",
     message: "",
   });
@@ -24,17 +24,33 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can handle form submission logic here
-    console.log("Form data:", formData);
-    // Reset form fields after submission
-    setFormData({
-      name: "",
-      phoneNumber: "",
-      email: "",
-      message: "",
-    });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "post",
+        body: JSON.stringify(formData),
+        headers: { "Content-type": "application/json" },
+      });
+
+      if (!response.ok) {
+        throw new Error(`response status: ${response.status}`);
+      }
+      const responseData = await response.json();
+      console.log(responseData["message"]);
+
+      alert("Message successfully sent");
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+    } catch (err) {
+      console.error(err);
+      alert("Error, please try resubmitting the form");
+    }
   };
   return (
     <>
@@ -62,12 +78,12 @@ function Contact() {
                 </Form.Group>
                 <Row>
                   <Col md={6}>
-                    <Form.Group controlId="phoneNumber">
+                    <Form.Group controlId="phone">
                       <Form.Label>Phone Number:</Form.Label>
                       <Form.Control
                         type="tel"
-                        name="phoneNumber"
-                        value={formData.phoneNumber}
+                        name="phone"
+                        value={formData.phone}
                         onChange={handleChange}
                         required
                       />

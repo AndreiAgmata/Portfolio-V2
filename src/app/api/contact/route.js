@@ -23,16 +23,26 @@ export async function POST(request) {
     },
   });
 
-  try {
-    const mail = await transporter.sendMail({
-      from: "agmataa1124@gmail.com",
-      to: "agmataa1124@gmail.com",
-      subject: `Portfolio Contact`,
-      html: `
+  const mailData = {
+    from: "agmataa1124@gmail.com",
+    to: "agmataa1124@gmail.com",
+    subject: `Portfolio Contact`,
+    html: `
               <p>Name: ${name} </p>
               <p>Email: ${email} </p>
               <p>Message: ${message} </p>
               `,
+  };
+
+  try {
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(mailData, (err, info) => {
+        if (err) {
+          reject("Error: Unable to send email");
+        } else {
+          resolve("Email sent");
+        }
+      });
     });
 
     return NextResponse.json({ message: "Success: email was sent" });

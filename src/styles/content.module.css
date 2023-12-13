@@ -1,0 +1,121 @@
+.title_stroke {
+  font-weight: 800;
+  font-size: clamp(1rem, 1rem + 4vw, 4.5rem);
+  -webkit-text-stroke: 2px white;
+  color: #131313;
+}
+
+.title_solid {
+  color: #fbfb3e;
+  font-weight: 800;
+  font-size: clamp(1rem, 1rem + 4vw, 5rem);
+  margin-top: -1.5rem;
+  margin-bottom: -1rem;
+}
+
+.title_solid_yellow {
+  color: #fbfb3e;
+  font-weight: 800;
+  font-size: clamp(1rem, 1rem + 4vw, 5rem);
+  margin-top: -1.5rem;
+  margin-bottom: -1rem;
+}
+
+.title_solid_dark {
+  color: #131313;
+  font-weight: 800;
+  font-size: clamp(1rem, 1rem + 4vw, 5rem);
+  margin-top: -1.5rem;
+  margin-bottom: -1rem;
+}
+
+.contentLeft {
+  padding-top: 6rem;
+  min-height: 100vh;
+  width: 50vw;
+  background-color: #131313;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contentLeft .about {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.contentLeft .about h1 {
+  color: #fbfb3e;
+}
+.contentLeft .about .infoWrapper {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border: 1rem solid #fbfb3e;
+  background-color: #fbfb3e;
+}
+.contentLeft .about .info {
+  padding: 1rem;
+  background-color: #131313;
+  border-radius: 1rem;
+}
+.contentLeft .about .info p {
+  color: white;
+}
+
+.contentRight {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  min-height: 100vh;
+  width: 50vw;
+  background-color: #131313;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fbfb3e;
+}
+.contentRight .skills {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.contentRight .skills h1 {
+  color: #131313;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+.contentRight .skills .infoWrapper {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border: 1rem solid #131313;
+  background-color: #131313;
+  width: 40vw;
+}
+.contentRight .skills .info {
+  background-color: #fbfb3e;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contentRight .skills .info .stack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.contentRight .skills .info .stack h2 {
+  margin-bottom: 0;
+  width: 30%;
+  text-align: right;
+}
+.contentRight .skills .info .stack .list {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 2rem;
+}/*# sourceMappingURL=content.module.css.map */

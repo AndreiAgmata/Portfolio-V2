@@ -1,0 +1,115 @@
+.title_stroke {
+  font-weight: 800;
+  font-size: clamp(1rem, 1rem + 4vw, 4.5rem);
+  -webkit-text-stroke: 2px white;
+  color: #131313;
+}
+
+.title_solid {
+  color: #fbfb3e;
+  font-weight: 800;
+  font-size: clamp(1rem, 1rem + 4vw, 5rem);
+  margin-top: -1.5rem;
+  margin-bottom: -1rem;
+}
+
+.title_solid_yellow {
+  color: #fbfb3e;
+  font-weight: 800;
+  font-size: clamp(1rem, 1rem + 4vw, 5rem);
+  margin-top: -1.5rem;
+  margin-bottom: -1rem;
+}
+
+.title_solid_dark {
+  color: #131313;
+  font-weight: 800;
+  font-size: clamp(1rem, 1rem + 4vw, 5rem);
+  margin-top: -1.5rem;
+  margin-bottom: -1rem;
+}
+
+.left {
+  min-height: 100vh;
+  width: 50vw;
+  background-color: #131313;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.left .about h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.left .about .infoWrapper {
+  border: 0.5rem solid #fbfb3e;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.left .about .infoWrapper .info {
+  padding: 1rem;
+}
+.left .about .infoWrapper .info p {
+  color: white;
+}
+.left .about .infoWrapper .info .memoji {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1.5rem;
+}
+
+.right {
+  min-height: 100vh;
+  width: 50vw;
+  background-color: #fbfb3e;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.right .techStack h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.right .techStack .stacks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.right .techStack .stacks .stack {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 10%;
+  border: 0.5rem solid #131313;
+  padding: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 1rem;
+}
+.right .techStack .stacks .stack h2 {
+  text-align: center;
+}
+.right .techStack .stacks .stack .list {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.right .techStack .stacks .stack:hover {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.6);
+  transform: scale(1.05);
+}/*# sourceMappingURL=info.module.css.map */

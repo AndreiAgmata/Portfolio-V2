@@ -6,8 +6,8 @@
       "details": "A comprehensive mentoring platform featuring seamless integration of chat, payment capabilities, and an advanced scheduling system, ensuring a fully functional and cohesive user experience.",
       "role": "Lead Frontend developer, Assistant backend developer",
       "image": "/MentorMatch.png",
-      "productionLink": "",
-      "githublink": ""
+      "productionLink": "https://prj-566-666-naa-team-01.vercel.app",
+      "githubLink": "https://github.com/AndreiAgmata/MentorMatch"
     },
 
     {
@@ -18,6 +18,6 @@
         "role": "Full Stack Developer",
         "image": "/Fragments.png",
         "productionLink": "",
-        "githublink": ""
+        "githubLink": "https://github.com/AndreiAgmata/fragments"
     }
   ]

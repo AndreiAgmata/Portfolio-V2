@@ -25,7 +25,20 @@ function Hero() {
             pushing boundaries. 🚀
           </p>
           <div>
-            <Button size="lg">Get in Touch</Button>
+            <Button
+              size="lg"
+              onClick={() => (window.location.href = "#contact")}
+            >
+              Get in Touch
+            </Button>
+            <Button
+              size="lg"
+              variant="outline-light"
+              style={{ marginLeft: "1rem" }}
+              onClick={() => (window.location.href = "#projects")}
+            >
+              See my work
+            </Button>
           </div>
         </section>
       </div>

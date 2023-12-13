@@ -30,14 +30,34 @@ function Projects() {
                     </p>
                     <div className={projects.horizontalline}></div>
                   </div>
-                  <Button size="lg">Go to Project</Button>
-                  <Button
-                    size="lg"
-                    variant="outline-light"
-                    style={{ marginLeft: "1rem" }}
-                  >
-                    View Code
-                  </Button>
+                  {project.productionLink === "" ? (
+                    <div>
+                      <Button
+                        size="lg"
+                        variant="outline-light"
+                        onClick={() => window.open(project.githubLink)}
+                      >
+                        View Code
+                      </Button>
+                    </div>
+                  ) : (
+                    <div>
+                      <Button
+                        size="lg"
+                        onClick={() => window.open(project.productionLink)}
+                      >
+                        Go to Project
+                      </Button>
+                      <Button
+                        size="lg"
+                        variant="outline-light"
+                        style={{ marginLeft: "1rem" }}
+                        onClick={() => window.open(project.githubLink)}
+                      >
+                        View Code
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -1,0 +1,106 @@
+@import "./variables.module.scss";
+
+.contentLeft{
+    padding-top: 6rem;
+    min-height: 100vh;
+    width: 50vw;
+    background-color: $color-Dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        h1{
+            color: $color-yellow;
+            
+        }
+        
+        .infoWrapper{
+            margin-top: 1rem;
+            border-radius: 1rem;
+            border: 1rem solid $color-yellow;
+            background-color: $color-yellow;
+        }
+
+        .info{
+            padding: 1rem;
+            background-color: $color-Dark;
+            border-radius: 1rem;
+            p{
+                color: white;
+            }
+        }   
+    }
+}
+
+.contentRight{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    min-height: 100vh;
+    width: 50vw;
+    background-color: $color-Dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $color-yellow;
+
+        .skills{
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+
+            h1{
+                color: $color-Dark;
+                text-align: right;
+                margin-bottom: 1rem;
+            }
+
+            .infoWrapper{
+                margin-top: 1rem;
+                border-radius: 1rem;
+                border: 1rem solid $color-Dark;
+                background-color: $color-Dark;
+                width: 40vw;
+            }
+    
+            .info{
+                background-color: $color-yellow;
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                .stack{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;
+
+                    h2{
+                        margin-bottom: 0;
+                        width: 30%;
+                        text-align: right;
+                    }
+
+                    .list{
+                        width: 70%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 2rem;
+                        margin-left: 2rem;
+                    }
+                }
+            }
+        }
+
+}

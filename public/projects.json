@@ -1,0 +1,23 @@
+[
+    {
+      "id": "01",
+      "title": "MentorMatch",
+      "sub": "Full-stack tutoring application",
+      "details": "A comprehensive mentoring platform featuring seamless integration of chat, payment capabilities, and an advanced scheduling system, ensuring a fully functional and cohesive user experience.",
+      "role": "Lead Frontend developer, Assistant backend developer",
+      "image": "/MentorMatch.png",
+      "productionLink": "",
+      "githublink": ""
+    },
+
+    {
+        "id": "02",
+        "title": "Fragments",
+        "sub": "Cloud-based microservice application",
+        "details": "Robust and adaptable platform uniquely tailored for processing text fragments and images. Harnessing the vast array of AWS services, this application has been meticulously developed to guarantee exceptional scalability, reliability, and efficiency",
+        "role": "Full Stack Developer",
+        "image": "/Fragments.png",
+        "productionLink": "",
+        "githublink": ""
+    }
+  ]

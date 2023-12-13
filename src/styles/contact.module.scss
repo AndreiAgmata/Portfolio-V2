@@ -1,0 +1,64 @@
+@import  "../styles/variables.module.scss";
+
+.contact{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $color-yellow;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    h1{
+        color: $color-Dark;
+        text-align: center;
+    }
+
+    .socialMedia{
+        width: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin: 2rem;
+    }
+
+    .formWrapper{
+        width: 50vw;
+        min-height: 60vh;
+        background-color: $color-Dark;
+        border: 1rem solid white;
+
+        .formContainer{
+            color: white;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h2{
+                margin-bottom: 2rem;
+            }
+            form{
+                width: 80%;
+                
+                label{
+                    margin-top: 1rem;
+                }
+
+                button{
+                    margin-top: 1rem;
+                    width: 100%;
+                }
+                
+            }
+        }
+    }
+        
+    
+    
+}

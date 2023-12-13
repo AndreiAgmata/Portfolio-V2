@@ -1,0 +1,68 @@
+@import "./variables.module.scss";
+
+.home{
+    display: flex;
+    padding-left: 7rem;
+}
+
+.nav{
+    min-height: 100vh;
+    width: 7vw;
+    background-color: $color-yellow;
+}
+
+.left{
+    min-height: 100vh;
+    width: 50vw;
+    background-color: $color-Dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    section{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+
+        p{
+            color: white;
+            font-weight: 500;
+            font-size: clamp(1px, 1.5vw, 1.5rem);
+            padding-top: 2rem;
+        }
+
+        button{
+            margin-top: 2rem;
+        }
+    }
+}
+
+.right{
+    min-height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-yellow;
+    
+
+    .bg{
+        
+        height: 100%;
+        width: 100%;
+        background-image: url("../../public/bg.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    section{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+       
+    }
+}

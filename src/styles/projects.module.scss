@@ -1,0 +1,106 @@
+@import "./variables.module.scss";
+
+.projects{
+    min-height: 100vh;
+    width: 100vw;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: linear-gradient(to right, $color-Dark 50%, $color-yellow 50%);
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        color: white;
+        width: 50%;
+        text-align: center;
+    }
+
+    .projectContainer{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+
+        .projectInfo{
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+    
+            .sideBar{
+                margin-right: 3rem;
+                margin-left: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                h1{
+                    font-size: 3rem;
+                }
+            }
+    
+            .content{
+                h1{
+                    margin-bottom: 2rem;
+                    font-size: 3rem;
+                }
+    
+                h4{
+                    color: white;
+                    font-weight: 400;
+                    margin-bottom: 2rem;
+                }
+    
+                .details{
+                    width: 75%;
+    
+                    p{
+                        color: white;
+                        font-weight: 100;
+                        font-size: 1rem;
+                    }
+    
+                    .role{
+                        margin-top: 10rem;
+    
+                        p{
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+
+        .imageSection{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+                img{
+                    border-radius: 1rem;
+                    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.4);
+                }
+           
+        }
+    }
+
+   
+
+   
+  }
+
+.horizontalline {
+    border-bottom: 1px solid #ffffff; 
+    margin: 20px 0;
+  }
+
+  .verticalline {
+    border-left: 1px solid rgb(255, 255, 255); /* Change color and width as needed */
+    height: 100%; /* Change height as needed */
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  

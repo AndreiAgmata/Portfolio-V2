@@ -2,6 +2,9 @@
 
 .navigation{
     display: none;
+    @media (min-width: 600px) {
+        display: block;
+      }
 }
 
 .burgerContainer{
@@ -11,8 +14,12 @@
     z-index: 999;
     position: fixed;
     padding: 1rem;
-    
     width: 100%;
+
+    @media (min-width: 600px) {
+        display: none;
+      }
+    
 }
 
 .sidebar{

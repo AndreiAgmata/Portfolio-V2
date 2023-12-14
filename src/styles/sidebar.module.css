@@ -30,6 +30,11 @@
 .navigation {
   display: none;
 }
+@media (min-width: 600px) {
+  .navigation {
+    display: block;
+  }
+}
 
 .burgerContainer {
   display: flex;
@@ -39,6 +44,11 @@
   position: fixed;
   padding: 1rem;
   width: 100%;
+}
+@media (min-width: 600px) {
+  .burgerContainer {
+    display: none;
+  }
 }
 
 .sidebar {

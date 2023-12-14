@@ -10,21 +10,32 @@ import { useState } from "react";
 
 export default function SideBar() {
   const [show, setShow] = useState(true);
+  const [iconColor, setIconColor] = useState("white");
 
   const handleClick = () => {
     setShow(!show);
+
+    if (show) {
+      setIconColor("black");
+    } else {
+      setIconColor("white");
+    }
   };
   return (
     <>
-      <div className={sidebar.burgerContainer} onClick={handleClick}>
+      <div className={sidebar.burgerContainer}>
         <GiHamburgerMenu
-          color="white"
+          color={iconColor}
           size="2em"
           onClick={handleClick}
           style={{ cursor: "pointer" }}
         />
       </div>
-      <div className={`${sidebar.sidebar} ${show ? sidebar.navigation : ""}`}>
+      <div
+        className={`${sidebar.sidebar} ${
+          show ? sidebar.navigationHidden : sidebar.navigationInView
+        }`}
+      >
         <Navbar className={`${sidebar.navbar}`}>
           <div className={sidebar.logo}>
             <NavLink href="#home">
@@ -32,16 +43,28 @@ export default function SideBar() {
             </NavLink>
           </div>
           <div className={sidebar.links}>
-            <NavLink className={sidebar.link} href="#about">
+            <NavLink
+              className={sidebar.link}
+              href="#about"
+              onClick={handleClick}
+            >
               ABOUT
             </NavLink>
             {/* <NavLink className={sidebar.link} href="#stack">
             TECH STACK
           </NavLink> */}
-            <NavLink className={sidebar.link} href="#projects">
+            <NavLink
+              className={sidebar.link}
+              href="#projects"
+              onClick={handleClick}
+            >
               PROJECTS
             </NavLink>
-            <NavLink className={sidebar.link} href="#contact">
+            <NavLink
+              className={sidebar.link}
+              href="#contact"
+              onClick={handleClick}
+            >
               CONTACT
             </NavLink>
           </div>

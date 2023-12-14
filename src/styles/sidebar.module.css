@@ -27,13 +27,16 @@
   margin-top: -0.5rem;
 }
 
-.navigation {
-  display: none;
+.navigationHidden {
+  left: 100%;
+  position: relative;
+  transition: left 0.5s ease-in-out;
 }
-@media (min-width: 600px) {
-  .navigation {
-    display: block;
-  }
+
+.navigationInView {
+  left: 0;
+  position: relative;
+  transition: left 0.5s ease-in-out;
 }
 
 .burgerContainer {
@@ -61,7 +64,6 @@
   .sidebar {
     width: 100vw;
     z-index: 99;
-    overflow: hidden;
   }
 }
 .sidebar .navbar {

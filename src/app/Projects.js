@@ -8,7 +8,7 @@ import projectsData from "../../public/projects.json";
 
 function Projects() {
   return (
-    <div className={app.home}>
+    <div className={app.home} id="projects">
       <div className={projects.projects}>
         <h1 className={variables.title_solid}>Projects</h1>
         {projectsData.map((project) => (

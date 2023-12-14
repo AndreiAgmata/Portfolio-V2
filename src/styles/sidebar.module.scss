@@ -1,10 +1,15 @@
 @import "./variables.module.scss";
 
-.navigation{
-    display: none;
-    @media (min-width: 600px) {
-        display: block;
-      }
+.navigationHidden{
+    left: 100%;
+    position: relative;
+    transition: left 0.5s ease-in-out;
+}
+
+.navigationInView{
+    left: 0;
+    position: relative;
+    transition: left 0.5s ease-in-out;
 }
 
 .burgerContainer{
@@ -28,10 +33,10 @@
     height: 100vh;
     position: fixed;
     @media (max-width: 600px) {
-        // display: none;
+    //    display: none;
        width: 100vw;
        z-index: 99;
-       overflow: hidden;
+      
       }
 
     .navbar{

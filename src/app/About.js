@@ -55,7 +55,7 @@ function About() {
           <h1 className={variables.title_solid_dark}>Tech Stack</h1>
           <div className={info.stacks}>
             <div className={info.stack}>
-              <h2>Frontend: </h2>
+              <h2>Frontend</h2>
               <div className={info.list}>
                 <FaReact size="4em" />
                 <TbBrandNextjs size="4em" />
@@ -66,7 +66,7 @@ function About() {
               </div>
             </div>
             <div className={info.stack}>
-              <h2>Backend: </h2>
+              <h2>Backend</h2>
               <div className={info.list}>
                 <SiExpress size="4em" />
                 <FaNode size="4em" />
@@ -75,7 +75,7 @@ function About() {
               </div>
             </div>
             <div className={info.stack}>
-              <h2>Languages: </h2>
+              <h2>Languages</h2>
               <div className={info.list}>
                 <SiCplusplus size="4em" />
                 <SiC size="4em" />
@@ -84,7 +84,7 @@ function About() {
               </div>
             </div>
             <div className={info.stack}>
-              <h2>Tools: </h2>
+              <h2>Tools</h2>
               <div className={info.list}>
                 <TbBrandVscode size="4em" />
                 <SiXcode size="4em" />

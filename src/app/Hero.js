@@ -24,7 +24,7 @@ function Hero() {
             <br />
             pushing boundaries. 🚀
           </p>
-          <div>
+          <div className={app.heroButtons}>
             <Button
               size="lg"
               onClick={() => (window.location.href = "#contact")}
@@ -34,7 +34,6 @@ function Hero() {
             <Button
               size="lg"
               variant="outline-light"
-              style={{ marginLeft: "1rem" }}
               onClick={() => (window.location.href = "#projects")}
             >
               See my work
@@ -45,10 +44,7 @@ function Hero() {
       <div className={app.right}>
         <div className={app.bg}>
           <section className={app.overlay_container}>
-            <Image src={memoji} alt="me" width="300" />
-            {/* <Button variant="secondary" size="lg">
-        See My Work
-      </Button> */}
+            <img src="/memoji.png" alt="memoji"></img>
           </section>
         </div>
       </div>

@@ -1,7 +1,7 @@
 [
     {
       "id": "01",
-      "title": "MentorMatch",
+      "title": "Mentor Match",
       "sub": "Full-stack tutoring application",
       "details": "A comprehensive mentoring platform featuring seamless integration of chat, payment capabilities, and an advanced scheduling system, ensuring a fully functional and cohesive user experience.",
       "role": "Lead Frontend developer, Assistant backend developer",

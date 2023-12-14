@@ -8,7 +8,7 @@ import projectsData from "../../public/projects.json";
 
 function Projects() {
   return (
-    <div className={app.home} id="projects">
+    <div className={app.home}>
       <div className={projects.projects}>
         <h1 className={variables.title_solid}>Projects</h1>
         {projectsData.map((project) => (
@@ -23,6 +23,10 @@ function Projects() {
                 <h4>{project.sub}</h4>
                 <div className={projects.details}>
                   <p>{project.details}</p>
+                  <div className={projects.mobileImg}>
+                    <img src={project.image} alt="Project Image"></img>
+                    <div className={projects.overlay}></div>
+                  </div>
                   <div className={projects.role}>
                     <div className={projects.horizontalline}></div>
                     <p>
@@ -31,7 +35,7 @@ function Projects() {
                     <div className={projects.horizontalline}></div>
                   </div>
                   {project.productionLink === "" ? (
-                    <div>
+                    <div className={projects.buttons}>
                       <Button
                         size="lg"
                         variant="outline-light"
@@ -41,7 +45,7 @@ function Projects() {
                       </Button>
                     </div>
                   ) : (
-                    <div>
+                    <div className={projects.buttons}>
                       <Button
                         size="lg"
                         onClick={() => window.open(project.productionLink)}
@@ -51,7 +55,6 @@ function Projects() {
                       <Button
                         size="lg"
                         variant="outline-light"
-                        style={{ marginLeft: "1rem" }}
                         onClick={() => window.open(project.githubLink)}
                       >
                         View Code
@@ -62,12 +65,7 @@ function Projects() {
               </div>
             </div>
             <div className={projects.imageSection}>
-              <Image
-                alt="Project Image"
-                width="500"
-                height="500"
-                src={project.image}
-              ></Image>
+              <img alt="Project Image" src={project.image}></img>
             </div>
           </div>
         ))}

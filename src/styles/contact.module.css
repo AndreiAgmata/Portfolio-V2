@@ -1,32 +1,30 @@
 .title_stroke {
   font-weight: 800;
-  font-size: clamp(1rem, 1rem + 4vw, 4.5rem);
-  -webkit-text-stroke: 2px white;
+  font-size: clamp(1rem, 1rem + 4vw, 4rem);
+  -webkit-text-stroke: 1px white;
   color: #131313;
+  margin-top: -0.5rem;
 }
 
 .title_solid {
   color: #fbfb3e;
   font-weight: 800;
-  font-size: clamp(1rem, 1rem + 4vw, 5rem);
-  margin-top: -1.5rem;
-  margin-bottom: -1rem;
+  font-size: clamp(1rem, 1rem + 6vw, 5rem);
+  margin-top: -0.5rem;
 }
 
 .title_solid_yellow {
   color: #fbfb3e;
   font-weight: 800;
-  font-size: clamp(1rem, 1rem + 4vw, 5rem);
-  margin-top: -1.5rem;
-  margin-bottom: -1rem;
+  font-size: clamp(1rem, 1rem + 6vw, 5rem);
+  margin-top: -0.5rem;
 }
 
 .title_solid_dark {
   color: #131313;
   font-weight: 800;
-  font-size: clamp(1rem, 1rem + 4vw, 5rem);
-  margin-top: -1.5rem;
-  margin-bottom: -1rem;
+  font-size: clamp(1rem, 1rem + 6vw, 5rem);
+  margin-top: -0.5rem;
 }
 
 .contact {
@@ -40,9 +38,20 @@
   justify-content: flex-start;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 .contact h1 {
   color: #131313;
   text-align: center;
+}
+@media (max-width: 600px) {
+  .contact h1 {
+    font-size: 2rem;
+  }
 }
 .contact .socialMedia {
   width: 20rem;
@@ -58,6 +67,11 @@
   background-color: #131313;
   border: 1rem solid white;
 }
+@media (max-width: 600px) {
+  .contact .formWrapper {
+    width: 100%;
+  }
+}
 .contact .formWrapper .formContainer {
   color: white;
   padding: 3rem;
@@ -65,6 +79,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 600px) {
+  .contact .formWrapper .formContainer {
+    padding: 2rem;
+  }
 }
 .contact .formWrapper .formContainer h2 {
   margin-bottom: 2rem;

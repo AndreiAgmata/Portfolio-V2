@@ -56,7 +56,7 @@ function Contact() {
     <>
       <div className={app.home} id="contact">
         <div className={contact.contact}>
-          <h1>Reach out, lets talk!</h1>
+          <h1 className={variables.title_solid_dark}>Reach out, lets talk!</h1>
           <div className={contact.socialMedia}>
             <FaInstagramSquare size="3em" />
             <FaLinkedin size="3em" />

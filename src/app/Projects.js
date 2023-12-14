@@ -69,6 +69,15 @@ function Projects() {
             </div>
           </div>
         ))}
+        <div className={projects.viewMoreWrapper}>
+          <Button
+            size="lg"
+            className={projects.viewMore}
+            onClick={() => window.open("https://github.com/AndreiAgmata")}
+          >
+            View More in GitHub
+          </Button>
+        </div>
       </div>
     </div>
   );

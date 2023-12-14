@@ -70,13 +70,30 @@ export default function SideBar() {
           </div>
           <div className={sidebar.icons}>
             <NavLink>
-              <TiSocialInstagramCircular size="2.5em" />
+              <TiSocialInstagramCircular
+                size="2.5em"
+                onClick={() =>
+                  window.open("https://www.instagram.com/dreezymixedit")
+                }
+              />
             </NavLink>
             <NavLink>
-              <FaGithub size="2em" />
+              <FaGithub
+                size="2em"
+                onClick={() =>
+                  window.open("https://www.github.com/andreiagmata")
+                }
+              />
             </NavLink>
             <NavLink>
-              <FaLinkedin size="2em" />
+              <FaLinkedin
+                size="2em"
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/andrei-agmata-540245252/"
+                  )
+                }
+              />
             </NavLink>
           </div>
         </Navbar>

@@ -187,6 +187,24 @@
   max-width: 70%;
   height: auto;
 }
+.projects .viewMoreWrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .projects .viewMoreWrapper {
+    width: 100%;
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .projects .viewMoreWrapper .viewMore {
+    width: 80%;
+    margin-top: -5rem;
+    margin-bottom: 5rem;
+  }
+}
 
 .horizontalline {
   border-bottom: 1px solid #ffffff;

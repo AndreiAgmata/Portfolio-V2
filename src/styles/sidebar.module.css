@@ -27,16 +27,20 @@
   margin-top: -0.5rem;
 }
 
-.navigationHidden {
-  left: 100%;
-  position: relative;
-  transition: left 0.5s ease-in-out;
+@media (max-width: 600px) {
+  .navigationHidden {
+    left: 100%;
+    position: relative;
+    transition: left 0.5s ease-in-out;
+  }
 }
 
-.navigationInView {
-  left: 0;
-  position: relative;
-  transition: left 0.5s ease-in-out;
+@media (max-width: 600px) {
+  .navigationInView {
+    left: 0;
+    position: relative;
+    transition: left 0.5s ease-in-out;
+  }
 }
 
 .burgerContainer {

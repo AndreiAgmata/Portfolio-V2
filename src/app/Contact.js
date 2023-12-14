@@ -58,9 +58,26 @@ function Contact() {
         <div className={contact.contact}>
           <h1 className={variables.title_solid_dark}>Reach out, lets talk!</h1>
           <div className={contact.socialMedia}>
-            <FaInstagramSquare size="3em" />
-            <FaLinkedin size="3em" />
-            <MdEmail size="3.5em" />
+            <FaInstagramSquare
+              size="3em"
+              onClick={() =>
+                window.open("https://www.instagram.com/dreezymixedit")
+              }
+            />
+            <FaLinkedin
+              size="3em"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/andrei-agmata-540245252/"
+                )
+              }
+            />
+            <MdEmail
+              size="3.5em"
+              onClick={() =>
+                (window.location.href = "mailto:aagmata1124@gmail.com")
+              }
+            />
           </div>
           <div className={contact.formWrapper}>
             <div className={contact.formContainer}>

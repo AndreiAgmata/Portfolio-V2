@@ -41,7 +41,7 @@
 }
 
 .left {
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 50vw;
   background-color: #131313;
   display: flex;
@@ -52,7 +52,7 @@
 @media (max-width: 600px) {
   .left {
     width: 100vw;
-    min-height: 70vh;
+    min-height: 70dvh;
     justify-content: center;
     align-items: flex-start;
   }
@@ -87,7 +87,7 @@
 }
 
 .right {
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 50vw;
   display: flex;
   justify-content: center;
@@ -97,7 +97,7 @@
 @media (max-width: 600px) {
   .right {
     width: 100vw;
-    min-height: 30vh;
+    min-height: 30dvh;
     justify-content: flex-end;
     align-items: flex-end;
   }

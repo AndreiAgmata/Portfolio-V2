@@ -38,7 +38,7 @@
   justify-content: flex-start;
   align-items: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .contact {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -48,7 +48,7 @@
   color: #131313;
   text-align: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .contact h1 {
     font-size: 2rem;
   }
@@ -67,7 +67,7 @@
   background-color: #131313;
   border: 1rem solid white;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .contact .formWrapper {
     width: 100%;
   }
@@ -80,7 +80,7 @@
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .contact .formWrapper .formContainer {
     padding: 2rem;
   }

@@ -40,7 +40,7 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .left {
     width: 100vw;
     min-height: 70vh;
@@ -52,7 +52,7 @@
   text-align: center;
   margin-bottom: 5rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .left .about h1 {
     font-size: 3rem;
   }
@@ -67,7 +67,7 @@
 }
 .left .about .infoWrapper .info p {
   color: white;
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(1rem, 0.5vw, 1.5rem);
 }
 .left .about .infoWrapper .info .memoji {
   display: flex;
@@ -88,7 +88,7 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .right {
     width: 100vw;
     min-height: 70vh;
@@ -100,7 +100,7 @@
   text-align: center;
   margin-bottom: 5rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .right .techStack h1 {
     font-size: 3rem;
   }
@@ -111,7 +111,7 @@
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .right .techStack .stacks {
     flex-direction: column;
     gap: 1rem;
@@ -127,7 +127,7 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   border-radius: 1rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .right .techStack .stacks .stack {
     width: 100%;
     margin: 0;
@@ -136,7 +136,7 @@
 .right .techStack .stacks .stack h2 {
   text-align: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .right .techStack .stacks .stack h2 {
     font-size: 2rem;
     font-weight: 800;
@@ -152,7 +152,7 @@
   align-items: center;
   gap: 10px;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .right .techStack .stacks .stack .list {
     flex-direction: row;
   }

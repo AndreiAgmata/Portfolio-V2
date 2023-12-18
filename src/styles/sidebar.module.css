@@ -74,6 +74,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+.sidebar .navbar .logo:hover {
+  transform: scale(1.2);
 }
 .sidebar .navbar .logo img {
   height: 2em;
@@ -99,6 +103,10 @@
 .sidebar .navbar .links .link {
   transform: rotate(270deg);
   font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+.sidebar .navbar .links .link:hover {
+  transform: scale(1.2) rotate(270deg);
 }
 @media (max-width: 850px) {
   .sidebar .navbar .links .link {
@@ -122,4 +130,10 @@
     flex-direction: row;
     gap: 2rem;
   }
+}
+.sidebar .navbar .icons .icon {
+  transition: transform 0.3s ease;
+}
+.sidebar .navbar .icons .icon:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=sidebar.module.css.map */

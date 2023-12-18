@@ -27,24 +27,25 @@
   margin-bottom: 0;
 }
 
-.footer {
-  padding-left: 7%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.loading {
+  min-height: 100dvh;
+  width: 100vw;
   background-color: #fbfb3e;
-  height: 10vh;
+  position: fixed;
+  z-index: 99999;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-@media (max-width: 850px) {
-  .footer {
-    padding-left: 0;
-    flex-direction: column;
-    align-items: center;
-  }
+.loading img {
+  height: 5rem;
+  width: auto;
 }
-@media (max-width: 850px) {
-  .footer p {
-    font-size: 0.8rem;
-  }
-}/*# sourceMappingURL=footer.module.css.map */
+.loading .shadow {
+  margin-top: 1.5rem;
+  height: 0.5rem;
+  width: 4.5rem;
+  background-color: #131313;
+  filter: blur(10px);
+}/*# sourceMappingURL=loading.module.css.map */

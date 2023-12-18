@@ -48,4 +48,8 @@
   width: 4.5rem;
   background-color: #131313;
   filter: blur(10px);
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=loading.module.css.map */

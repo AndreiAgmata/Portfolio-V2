@@ -1,11 +1,12 @@
 import loading from "../styles/loading.module.scss";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Loading() {
   let logo = useRef();
   let shadow = useRef();
   const tl = gsap.timeline();
+  const [hide, setHide] = useState(false);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -34,14 +35,15 @@ function Loading() {
 
       setTimeout(() => {
         tl.pause();
-      }, 6000);
+        setHide(true);
+      }, 4000);
     });
 
     return () => ctx.revert();
   });
 
   return (
-    <div className={loading.loading}>
+    <div className={`${loading.loading} ${hide ? loading.hidden : ""}`}>
       <img src="./logo.png" alt="log" ref={(el) => (logo = el)}></img>
       <div className={loading.shadow} ref={(el) => (shadow = el)}></div>
     </div>

@@ -26,6 +26,14 @@ $color-Dark : #131313;
     
 }
 
+.title_solid_white{
+    color: white;
+    font-weight: 800;
+    font-size: clamp(1rem, 1rem + 6vw, 5rem);
+    margin-bottom: 0;
+    
+}
+
 .title_solid_dark{
     color: $color-Dark;
     font-weight: 800;

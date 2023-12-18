@@ -51,20 +51,24 @@ export default function SideBar() {
           <div className={sidebar.links}>
             <NavLink
               className={sidebar.link}
-              href="#about"
+              href="#projects"
               onClick={handleClick}
             >
-              ABOUT
+              PROJECTS
             </NavLink>
-            {/* <NavLink className={sidebar.link} href="#stack">
-            TECH STACK
-          </NavLink> */}
             <NavLink
               className={sidebar.link}
               href="#projects"
               onClick={handleClick}
             >
-              PROJECTS
+              SKILLS
+            </NavLink>
+            <NavLink
+              className={sidebar.link}
+              href="#about"
+              onClick={handleClick}
+            >
+              ABOUT
             </NavLink>
             <NavLink
               className={sidebar.link}

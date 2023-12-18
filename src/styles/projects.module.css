@@ -20,6 +20,13 @@
   margin-bottom: 0;
 }
 
+.title_solid_white {
+  color: white;
+  font-weight: 800;
+  font-size: clamp(1rem, 1rem + 6vw, 5rem);
+  margin-bottom: 0;
+}
+
 .title_solid_dark {
   color: #131313;
   font-weight: 800;

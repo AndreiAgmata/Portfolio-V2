@@ -14,6 +14,7 @@ import Loading from "./Loading";
 import { Power3 } from "gsap";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import Skills from "./Skills";
 
 export default function Home() {
   let loading = useRef();
@@ -35,11 +36,11 @@ export default function Home() {
       <div ref={(el) => (loading = el)}>
         <Loading />
       </div>
-
       <SideBar />
       <Hero />
-      <About />
       <Projects />
+      <Skills />
+      <About />
       <Contact />
       <Footer />
     </>

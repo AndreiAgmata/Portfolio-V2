@@ -115,9 +115,15 @@ function Hero() {
         </section>
       </div>
       <div className={app.right}>
-        <section className={app.overlay_container}>
-          <img src="/memoji.png" alt="memoji" ref={(el) => (emoji = el)}></img>
-        </section>
+        <div className={app.bg}>
+          <section className={app.overlay_container}>
+            <img
+              src="/memoji.png"
+              alt="memoji"
+              ref={(el) => (emoji = el)}
+            ></img>
+          </section>
+        </div>
       </div>
     </div>
   );

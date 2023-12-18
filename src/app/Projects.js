@@ -5,6 +5,8 @@ import variables from "../styles/variables.module.scss";
 import Image from "next/image";
 import Mentor from "../../public/MentorMatch.png";
 import projectsData from "../../public/projects.json";
+import gsap from "gsap";
+import { Power3 } from "gsap";
 
 function Projects() {
   return (

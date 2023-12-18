@@ -114,6 +114,9 @@
     font-size: 3rem;
     font-weight: 800;
   }
+  .sidebar .navbar .links .link:hover {
+    transform: scale(1.2);
+  }
 }
 .sidebar .navbar .icons {
   height: 20%;

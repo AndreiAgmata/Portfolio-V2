@@ -6,24 +6,34 @@ import { TiSocialInstagramCircular } from "react-icons/ti";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import { Power3 } from "gsap";
+import gsap from "gsap";
 
 export default function SideBar() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [iconColor, setIconColor] = useState("white");
+  let menuBar = useRef();
+  const tl = new gsap.timeline();
 
   const handleClick = () => {
     setShow(!show);
 
-    if (show) {
-      setIconColor("black");
-    } else {
-      setIconColor("white");
+    if (window.innerWidth < 850) {
+      if (show) {
+        tl.to(menuBar, { xPercent: 100, ease: Power3.easeOut });
+        setIconColor("white");
+      } else {
+        tl.to(menuBar, { xPercent: -100, ease: Power3.easeOut });
+        setIconColor("black");
+      }
     }
   };
+
   return (
     <>
-      <div className={sidebar.burgerContainer}>
+      <div className={sidebar.burgerContainer} id="burgerContainer">
         <GiHamburgerMenu
           color={iconColor}
           size="2em"
@@ -31,15 +41,11 @@ export default function SideBar() {
           style={{ cursor: "pointer" }}
         />
       </div>
-      <div
-        className={`${sidebar.sidebar} ${
-          show ? sidebar.navigationHidden : sidebar.navigationInView
-        }`}
-      >
+      <div className={`${sidebar.sidebar}`} ref={(el) => (menuBar = el)}>
         <Navbar className={`${sidebar.navbar}`}>
           <div className={sidebar.logo}>
             <NavLink href="#home">
-              <SiAnalogue size="2.5em" />
+              <img src="/logo.png" alt="logo"></img>
             </NavLink>
           </div>
           <div className={sidebar.links}>
@@ -69,7 +75,7 @@ export default function SideBar() {
             </NavLink>
           </div>
           <div className={sidebar.icons}>
-            <NavLink>
+            <NavLink className={sidebar.icon}>
               <TiSocialInstagramCircular
                 size="2.5em"
                 onClick={() =>
@@ -77,7 +83,7 @@ export default function SideBar() {
                 }
               />
             </NavLink>
-            <NavLink>
+            <NavLink className={sidebar.icon}>
               <FaGithub
                 size="2em"
                 onClick={() =>
@@ -85,7 +91,7 @@ export default function SideBar() {
                 }
               />
             </NavLink>
-            <NavLink>
+            <NavLink className={sidebar.icon}>
               <FaLinkedin
                 size="2em"
                 onClick={() =>

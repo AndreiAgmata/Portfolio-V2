@@ -11,7 +11,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    @media (max-width: 600px) {
+    @media (max-width: 850px) {
         padding-left: 1rem;
         padding-right: 1rem;
       }
@@ -21,7 +21,7 @@
         color: $color-Dark;
         text-align: center;
 
-        @media (max-width: 600px) {
+        @media (max-width: 850px) {
             font-size: 2rem;
           }
     }
@@ -34,8 +34,6 @@
         gap: 3rem;
         margin: 2rem;
 
-        
-
     }
 
     .formWrapper{
@@ -44,7 +42,7 @@
         background-color: $color-Dark;
         border: 1rem solid white;
 
-        @media (max-width: 600px) {
+        @media (max-width: 850px) {
             width: 100%;
           }
 
@@ -56,7 +54,7 @@
             justify-content: center;
             align-items: center;
 
-            @media (max-width: 600px) {
+            @media (max-width: 850px) {
                 padding: 2rem;
               }
 

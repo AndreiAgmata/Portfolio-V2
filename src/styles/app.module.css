@@ -3,35 +3,35 @@
   font-size: clamp(1rem, 1rem + 4vw, 4rem);
   -webkit-text-stroke: 1px white;
   color: #131313;
-  margin-top: -0.5rem;
+  margin-bottom: 0;
 }
 
 .title_solid {
   color: #fbfb3e;
   font-weight: 800;
   font-size: clamp(1rem, 1rem + 6vw, 5rem);
-  margin-top: -0.5rem;
+  margin-bottom: 0;
 }
 
 .title_solid_yellow {
   color: #fbfb3e;
   font-weight: 800;
   font-size: clamp(1rem, 1rem + 6vw, 5rem);
-  margin-top: -0.5rem;
+  margin-bottom: 0;
 }
 
 .title_solid_dark {
   color: #131313;
   font-weight: 800;
   font-size: clamp(1rem, 1rem + 6vw, 5rem);
-  margin-top: -0.5rem;
+  margin-bottom: 0;
 }
 
 .home {
   display: flex;
   padding-left: 7%;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .home {
     padding-left: 0;
     display: flex;
@@ -49,12 +49,13 @@
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .left {
     width: 100vw;
     min-height: 70dvh;
-    justify-content: center;
+    align-items: center;
     align-items: flex-start;
+    padding-top: 5rem;
   }
 }
 .left section {
@@ -62,11 +63,17 @@
   flex-direction: column;
   padding: 2rem;
 }
-.left section p {
+.left section h1 {
+  padding: 0.2rem;
+}
+.left section .text {
+  padding-top: 2rem;
+}
+.left section .text p {
   color: white;
   font-weight: 400;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
-  padding-top: 2rem;
+  margin-top: -1rem;
 }
 .left section .heroButtons {
   display: flex;
@@ -74,13 +81,17 @@
   gap: 1rem;
   margin-top: 1rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .left section .heroButtons {
     flex-direction: column;
+    justify-content: center;
+    width: 100%;
     margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .left section .heroButtons button {
     width: 100%;
   }
@@ -94,7 +105,7 @@
   align-items: center;
   background-color: #fbfb3e;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .right {
     width: 100vw;
     min-height: 30dvh;

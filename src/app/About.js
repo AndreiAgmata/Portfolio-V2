@@ -44,7 +44,7 @@ function About() {
                 development with each line of code I write.
               </p>
               <div className={info.memoji}>
-                <Image src={memoji} alt="me" width="250"></Image>
+                <Image src={memoji} alt="me" width="220"></Image>
               </div>
             </div>
           </div>

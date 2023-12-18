@@ -79,7 +79,7 @@ export default function SideBar() {
               <TiSocialInstagramCircular
                 size="2.5em"
                 onClick={() =>
-                  window.open("https://www.instagram.com/dreezymixedit")
+                  window.open("https://www.instagram.com/andreiagmata.dev")
                 }
               />
             </NavLink>

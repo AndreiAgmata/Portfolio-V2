@@ -76,7 +76,7 @@
 }
 .left section .text p {
   color: white;
-  font-weight: 400;
+  font-weight: 500;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   margin-top: -1rem;
 }

@@ -55,7 +55,7 @@
   color: white;
   width: 50%;
   text-align: center;
-  margin-bottom: 5rem;
+  padding-bottom: 2px;
 }
 @media (max-width: 850px) {
   .projects h1 {
@@ -66,6 +66,7 @@
 .projects .projectContainer {
   display: flex;
   flex-direction: row;
+  margin-top: 5rem;
   margin-bottom: 10rem;
 }
 @media (max-width: 850px) {
@@ -84,41 +85,46 @@
   }
 }
 .projects .projectContainer .projectInfo .sideBar {
-  margin-right: 3rem;
-  margin-left: 1rem;
+  width: 20%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
-@media (max-width: 850px) {
-  .projects .projectContainer .projectInfo .sideBar {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
-.projects .projectContainer .projectInfo .sideBar h1 {
+.projects .projectContainer .projectInfo .sideBar h2 {
   font-size: 3rem;
+  color: white;
+}
+.projects .projectContainer .projectInfo .content {
+  width: 80%;
 }
 @media (max-width: 850px) {
   .projects .projectContainer .projectInfo .content {
     margin-right: 2rem;
   }
 }
-.projects .projectContainer .projectInfo .content h1 {
-  width: 100%;
+.projects .projectContainer .projectInfo .content .titleWrapper {
   margin-bottom: 2rem;
+  overflow: hidden;
+}
+.projects .projectContainer .projectInfo .content .titleWrapper h1 {
+  width: 100%;
   font-size: 3rem;
   text-align: start;
 }
 @media (max-width: 850px) {
-  .projects .projectContainer .projectInfo .content h1 {
+  .projects .projectContainer .projectInfo .content .titleWrapper h1 {
     text-align: start;
   }
 }
-.projects .projectContainer .projectInfo .content h4 {
+.projects .projectContainer .projectInfo .content .subtitleWrapper {
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.projects .projectContainer .projectInfo .content .subtitleWrapper h4 {
   color: white;
   font-weight: 400;
-  margin-bottom: 2rem;
+  margin: 0;
 }
 .projects .projectContainer .projectInfo .content .details {
   width: 75%;
@@ -188,6 +194,11 @@
     display: none;
   }
 }
+.projects .projectContainer .imageSection .imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .projects .projectContainer .imageSection img {
   border-radius: 1rem;
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.4);
@@ -220,7 +231,6 @@
 
 .verticalline {
   border-left: 1px solid rgb(255, 255, 255); /* Change color and width as needed */
-  height: 100%; /* Change height as needed */
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  height: 80%; /* Change height as needed */
+  margin-top: 1.5rem;
 }/*# sourceMappingURL=projects.module.css.map */

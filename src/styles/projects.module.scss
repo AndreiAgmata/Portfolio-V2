@@ -21,8 +21,8 @@
         color: white;
         width: 50%;
         text-align: center;
-        margin-bottom: 5rem;
-
+        padding-bottom: 2px;
+        
         @media (max-width: 850px) {
             width: 100%;
             font-size: 3rem;
@@ -32,6 +32,8 @@
     .projectContainer{
         display: flex;
         flex-direction: row;
+        margin-top: 5rem;
+
         margin-bottom: 10rem;
 
         @media (max-width: 850px) {
@@ -48,44 +50,56 @@
                }
     
             .sideBar{
-                margin-right: 3rem;
-                margin-left: 1rem;
+                width: 20%;
                 display: flex;
                 flex-direction: column;
+                justify-content: flex-start;
                 align-items: center;
 
                 @media (max-width: 850px) {
-                    margin-left: 1rem;
-                    margin-right: 1rem;
+                    // padding-left: 1rem;
+                    // padding-right: 1rem;
                    }
     
-                h1{
+                h2{
                     font-size: 3rem;
+                    color: white;
                 }
             }
     
             .content{
-
+                width: 80%;
                 @media (max-width: 850px) {
                     margin-right: 2rem;
                    }
 
-                h1{
-                    width: 100%;
+                .titleWrapper{
                     margin-bottom: 2rem;
-                    font-size: 3rem;
-                    text-align: start;
-
-                    @media (max-width: 850px) {
+                    overflow: hidden;
+                    h1{
+                        width: 100%;
+                        
+                        font-size: 3rem;
                         text-align: start;
-                       }
-                }
     
-                h4{
-                    color: white;
-                    font-weight: 400;
-                    margin-bottom: 2rem;
+                        @media (max-width: 850px) {
+                            text-align: start;
+                           }
+                    }
                 }
+
+                
+                .subtitleWrapper{
+                    margin-bottom: 2rem;
+                    overflow: hidden;
+                    h4{
+                        color: white;
+                        font-weight: 400;
+                        margin: 0;
+                        
+                    }
+                }
+                
     
                 .details{
                     width: 75%;
@@ -155,16 +169,21 @@
         }
 
         .imageSection{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             @media (max-width: 850px) {
                 display: none;
                }
 
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          
+            .imageWrapper
+            {   
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
                 img{
                     border-radius: 1rem;
                     box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.4);
@@ -206,9 +225,8 @@
 
   .verticalline {
     border-left: 1px solid rgb(255, 255, 255); /* Change color and width as needed */
-    height: 100%; /* Change height as needed */
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+    height: 80%; /* Change height as needed */
+    margin-top: 1.5rem;
   }
 
   

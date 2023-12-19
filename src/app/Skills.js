@@ -15,7 +15,7 @@ function Skills() {
               <img src="./ux-design.svg" alt="svg"></img>
             </div>
             <h1 className={variables.title_solid_yellow}>
-              Solution-oriented UI design
+              Solution-oriented UX design
             </h1>
             <p>
               Identifying challenges within a business, devising strategies that

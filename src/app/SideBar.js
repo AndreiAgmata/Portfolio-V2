@@ -58,7 +58,7 @@ export default function SideBar() {
             </NavLink>
             <NavLink
               className={sidebar.link}
-              href="#projects"
+              href="#skills"
               onClick={handleClick}
             >
               SKILLS

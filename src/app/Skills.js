@@ -5,7 +5,7 @@ import app from "../styles/app.module.scss";
 function Skills() {
   return (
     <div className={app.home}>
-      <div className={skills.skills}>
+      <div className={skills.skills} id="skills">
         <div className={skills.headerContainer}>
           <h1 className={variables.title_solid_white}>Skills</h1>
         </div>

@@ -28,7 +28,7 @@ function Skills() {
               <img src="./backend.svg" alt="svg"></img>
             </div>
             <h1 className={variables.title_solid_black}>
-              Efficient Backend Architecture
+              Optimized Backend System
             </h1>
             <p>
               Strong focus on creating robust, scalable, and efficient systems.

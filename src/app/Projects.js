@@ -10,139 +10,139 @@ import { Power3 } from "gsap";
 import { useEffect, useRef } from "react";
 
 function Projects() {
-  let pageHeader = useRef();
-  let number = useRef();
-  let title = useRef();
-  let subtitle = useRef();
-  let details = useRef();
-  let role = useRef();
-  let vLine = useRef();
-  let hLineTop = useRef();
-  let hLineBot = useRef();
-  let button = useRef();
-  let image = useRef();
-  let mobileImg = useRef();
+  // let project = useRef([]);
+  // project.current = [];
+
+  let projectRefs = useRef([]);
+  projectRefs.current = [];
 
   const tl = new gsap.timeline();
 
+  const addToRefs = (el) => {
+    if (el && !projectRefs.current.includes(el)) {
+      projectRefs.current.push(el);
+    }
+  };
+
   useEffect(() => {
     let ctx = gsap.context(() => {
-      tl.from(
-        image,
-        1.2,
-        { xPercent: -100, opacity: 0, ease: Power3.easeOut },
-        "Start"
-      );
-
-      tl.from(
-        pageHeader,
-        0.7,
-        {
-          yPercent: 100,
-          opacity: 0,
-          ease: Power3.easeOut,
-        },
-        "Start"
-      )
-        .from(
-          number,
+      projectRefs.current.forEach((projectRef) => {
+        tl.from(
+          projectRef.children[1].children[0],
           1.2,
-          {
-            xPercent: -100,
-            opacity: 0,
-            ease: Power3.easeOut,
-          },
-          0.15
-        )
-        .from(
-          title,
-          1.2,
-          {
-            yPercent: 100,
-            ease: Power3.easeOut,
-          },
-          0.15
-        )
-        .from(
-          subtitle,
-          1.2,
-          {
-            yPercent: 100,
-            opacity: 0,
-            ease: Power3.easeOut,
-          },
-          0.15
-        )
-        .from(
-          details,
-          1.2,
-          {
-            opacity: 0,
-            ease: Power3.easeOut,
-            delay: 0.8,
-          },
-          0.15
-        )
-        .from(
-          mobileImg,
-          1.2,
-          {
-            scale: 0,
-            opacity: 0,
-            ease: Power3.easeOut,
-          },
-          1.2
-        )
-        .from(
-          role,
-          1.2,
-          {
-            xPercent: -100,
-            opacity: 0,
-            ease: Power3.easeOut,
-            delay: 1,
-          },
-          0.15
-        )
-        .from(
-          vLine,
-          3.6,
-          {
-            height: 0,
-            opacity: 0,
-            ease: Power3.easeOut,
-          },
-          0.15
-        )
-        .from(
-          hLineTop,
-          1.2,
-          {
-            width: 0,
-            opacity: 0,
-            ease: Power3.easeOut,
-          },
-          0.5
-        )
-        .from(
-          hLineBot,
-          1.2,
-          {
-            width: 0,
-            opacity: 0,
-            ease: Power3.easeOut,
-          },
-          0.7
-        )
-        .staggerFrom(
-          [button.children[0], button.children[1]],
-          1.2,
-          {
-            opacity: 0,
-            ease: Power3.easeOut,
-          },
-          0.3
+          { xPercent: -100, opacity: 0, ease: Power3.easeOut },
+          "Start"
         );
+
+        tl.from(
+          projectRef.children[0].children[1].children[0].children[0],
+          1.2,
+          {
+            yPercent: 100,
+            opacity: 0,
+            ease: Power3.easeOut,
+          },
+          0.15
+        )
+          .from(
+            projectRef.children[0].children[0].children[0].children[0],
+            1.2,
+            {
+              xPercent: -100,
+              opacity: 0,
+              ease: Power3.easeOut,
+            },
+            0.15
+          )
+          .from(
+            projectRef.children[0].children[1].children[1].children[0],
+            1.2,
+            {
+              yPercent: 100,
+              opacity: 0,
+              ease: Power3.easeOut,
+            },
+            0.15
+          )
+          .from(
+            projectRef.children[0].children[1].children[2].children[0],
+            1.2,
+            {
+              opacity: 0,
+              ease: Power3.easeOut,
+              delay: 0.8,
+            },
+            0.15
+          )
+          .from(
+            projectRef.children[0].children[1].children[2].children[1],
+            1.2,
+            {
+              scale: 0,
+              opacity: 0,
+              ease: Power3.easeOut,
+            },
+            1.2
+          )
+          .from(
+            projectRef.children[0].children[1].children[2].children[2]
+              .children[1],
+            1.2,
+            {
+              xPercent: -100,
+              opacity: 0,
+              ease: Power3.easeOut,
+              delay: 1,
+            },
+            0.15
+          )
+          .from(
+            projectRef.children[0].children[0].children[1],
+            3.6,
+            {
+              height: 0,
+              opacity: 0,
+              ease: Power3.easeOut,
+            },
+            0.15
+          )
+          .from(
+            projectRef.children[0].children[1].children[2].children[2]
+              .children[0],
+            1.2,
+            {
+              width: 0,
+              opacity: 0,
+              ease: Power3.easeOut,
+            },
+            0.5
+          )
+          .from(
+            projectRef.children[0].children[1].children[2].children[2]
+              .children[2],
+            1.2,
+            {
+              width: 0,
+              opacity: 0,
+              ease: Power3.easeOut,
+            },
+            0.7
+          )
+          .staggerFrom(
+            [
+              projectRef.children[0].children[1].children[2].children[3]
+                .children[0],
+              projectRef.children[0].children[1].children[2].children[3]
+                .children[1],
+            ],
+            0.7,
+            {
+              opacity: 0,
+              ease: Power3.easeOut,
+            },
+            0.2
+          );
+      });
     });
 
     return () => ctx.revert();
@@ -152,86 +152,69 @@ function Projects() {
     <div className={app.home} id="projects">
       <div className={projects.projects}>
         <div style={{ overflow: "hidden" }}>
-          <h1 className={variables.title_solid} ref={(el) => (pageHeader = el)}>
-            Projects
-          </h1>
+          <h1 className={variables.title_solid}>Projects</h1>
         </div>
-        <div className={projects.projectContainer}>
-          <div className={projects.projectInfo}>
-            <div className={projects.sideBar}>
-              <div style={{ overflow: "hidden" }}>
-                <h2 ref={(el) => (number = el)}>01</h2>
+        {projectsData.map((project) => (
+          <div
+            className={projects.projectContainer}
+            key={project.id}
+            ref={addToRefs}
+          >
+            <div className={projects.projectInfo}>
+              <div className={projects.sideBar}>
+                <div style={{ overflow: "hidden" }}>
+                  <h2>{project.id}</h2>
+                </div>
+                <div className={projects.verticalline}></div>
               </div>
-              <div
-                className={projects.verticalline}
-                ref={(el) => (vLine = el)}
-              ></div>
+              <div className={projects.content}>
+                <div className={projects.titleWrapper}>
+                  <h1>{project.title}</h1>
+                </div>
+                <div className={projects.subtitleWrapper}>
+                  <h4>{project.sub}</h4>
+                </div>
+                <div className={projects.details}>
+                  <p>{project.details}</p>
+                  <div className={projects.mobileImg}>
+                    <img src={project.image} alt="Project Image"></img>
+                    <div className={projects.overlay}></div>
+                  </div>
+                  <div className={projects.role} style={{ overflow: "hidden" }}>
+                    <div className={projects.horizontalline}></div>
+                    <p>
+                      <strong>Role :</strong> {project.role}
+                    </p>
+                    <div className={projects.horizontalline}></div>
+                  </div>
+                  <div className={projects.buttons}>
+                    <Button
+                      size="lg"
+                      onClick={() => window.open(project.productionLink)}
+                    >
+                      Go to Project
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline-light"
+                      onClick={() => window.open(project.githubLink)}
+                    >
+                      View Code
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className={projects.content}>
-              <div className={projects.titleWrapper}>
-                <h1 ref={(el) => (title = el)}>Mentor Match</h1>
-              </div>
-              <div className={projects.subtitleWrapper}>
-                <h4 ref={(el) => (subtitle = el)}>
-                  Full-stack tutoring application
-                </h4>
-              </div>
-              <div className={projects.details}>
-                <p ref={(el) => (details = el)}>
-                  A comprehensive mentoring platform featuring seamless
-                  integration of chat, payment capabilities, and an advanced
-                  scheduling system, ensuring a fully functional and cohesive
-                  user experience.
-                </p>
-                <div
-                  className={projects.mobileImg}
-                  ref={(el) => (mobileImg = el)}
-                >
-                  <img src="/MentorMatch.png" alt="Project Image"></img>
-                  <div className={projects.overlay}></div>
-                </div>
-                <div className={projects.role} style={{ overflow: "hidden" }}>
-                  <div
-                    className={projects.horizontalline}
-                    ref={(el) => (hLineTop = el)}
-                  ></div>
-                  <p ref={(el) => (role = el)}>
-                    <strong>Role :</strong> Lead Frontend developer, Assistant
-                    backend developer
-                  </p>
-                  <div
-                    className={projects.horizontalline}
-                    ref={(el) => (hLineBot = el)}
-                  ></div>
-                </div>
-                <div className={projects.buttons} ref={(el) => (button = el)}>
-                  <Button
-                    size="lg"
-                    onClick={() =>
-                      window.open("https://prj-566-666-naa-team-01.vercel.app")
-                    }
-                  >
-                    Go to Project
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline-light"
-                    onClick={() =>
-                      window.open("https://github.com/AndreiAgmata/MentorMatch")
-                    }
-                  >
-                    View Code
-                  </Button>
-                </div>
+            <div
+              className={projects.imageSection}
+              style={{ overflow: "hidden" }}
+            >
+              <div className={projects.imageWrapper}>
+                <img alt="Project Image" src={project.image}></img>
               </div>
             </div>
           </div>
-          <div className={projects.imageSection} style={{ overflow: "hidden" }}>
-            <div className={projects.imageWrapper} ref={(el) => (image = el)}>
-              <img alt="Project Image" src="/MentorMatch.png"></img>
-            </div>
-          </div>
-        </div>
+        ))}
         <div className={projects.viewMoreWrapper}>
           <Button
             size="lg"

@@ -58,6 +58,7 @@
 }
 @media (max-width: 850px) {
   .left {
+    height: var(--doc-height);
     width: 100vw;
     align-items: center;
     align-items: flex-start;
@@ -68,8 +69,14 @@
   flex-direction: column;
   padding: 2rem;
 }
+@media (max-width: 850px) {
+  .left section {
+    justify-content: center;
+    width: 100%;
+  }
+}
 .left section h1 {
-  padding: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 .left section .text {
   padding-top: 2rem;
@@ -95,6 +102,9 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+.left section .heroButtons button {
+  border-radius: 0;
 }
 @media (max-width: 850px) {
   .left section .heroButtons button {

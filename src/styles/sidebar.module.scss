@@ -3,17 +3,22 @@
 
 .burgerContainer{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     z-index: 999;
     position: fixed;
     padding: 1rem;
     width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.474);
 
     @media (min-width: 850px) {
         display: none;
       }
     
+    img{
+        height: 1.5em;
+        
+    }
 }
 
 .sidebar{
@@ -24,7 +29,7 @@
     @media (max-width: 850px) {
        width: 100vw;
        z-index: 99;
-       margin-left: 100%;
+       top: -100%;
       }
 
     .navbar{

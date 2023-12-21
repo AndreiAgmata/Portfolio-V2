@@ -60,6 +60,11 @@
 .skills .headerContainer h1 {
   text-align: center;
 }
+@media (max-width: 850px) {
+  .skills .headerContainer h1 {
+    font-size: 4rem;
+  }
+}
 .skills .skillsContainer {
   display: flex;
   flex-direction: row;

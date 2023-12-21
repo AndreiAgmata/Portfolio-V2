@@ -30,23 +30,25 @@
 
         .headerContainer{
             width: 100%;
-       
+            overflow: hidden;
             h1{
                 width: 50%;
                 text-align: center;
-                margin-bottom: 5rem;
+                
                 @media (max-width: 850px) {
                     width: 100%;
                     color: $color-Dark;
-                    font-size: 3rem;
+                    font-size: 4rem;
                    }
             }
+            margin-bottom: 5rem;
         }
         .infoWrapper{
             width: 50%;
             border: 0.5rem solid $color-yellow;
             border-radius: 1rem;
             box-shadow: 14px 14px 40px 0 rgba(0,0,0,0.4);
+            
 
             @media (max-width: 850px) {
                 width: 100%;

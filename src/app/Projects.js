@@ -11,11 +11,11 @@ import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerEase(Power3);
 
 function Projects() {
   let projectRefs = useRef([]);
   projectRefs.current = [];
+  let projectTitle = useRef();
 
   const addToRefs = (el) => {
     if (el && !projectRefs.current.includes(el)) {
@@ -25,11 +25,21 @@ function Projects() {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
+      const tl = new gsap.timeline({
+        scrollTrigger: {
+          trigger: projectTitle,
+          start: "top center+=400",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      tl.from(projectTitle, 0.7, { yPercent: 100, ease: Power3.easeOut });
+
       projectRefs.current.forEach((projectRef) => {
         const tl = new gsap.timeline({
           scrollTrigger: {
             trigger: projectRef,
-            start: "top center+=100",
+            start: "top center+=200",
             toggleActions: "play none none reverse",
           },
         });
@@ -38,7 +48,7 @@ function Projects() {
 
         tl.from(q("#project-num"), {
           xPercent: -100,
-          opacity: 0,
+
           ease: "sine.inOut",
           duration: 0.5,
         })
@@ -46,7 +56,7 @@ function Projects() {
             q("#title"),
             {
               yPercent: 100,
-              opacity: 0,
+
               ease: Power3.easeOut,
               duration: 0.7,
             },
@@ -56,7 +66,7 @@ function Projects() {
             q("#image"),
             {
               scale: 0,
-              opacity: 0,
+
               ease: Power3.easeOut,
             },
             0.2
@@ -65,7 +75,7 @@ function Projects() {
             q("#vLine"),
             {
               height: 0,
-              opacity: 0,
+
               ease: Power3.easeOut,
               duration: 1,
             },
@@ -75,7 +85,7 @@ function Projects() {
             q("#sub"),
             {
               xPercent: -100,
-              opacity: 0,
+
               ease: Power3.easeOut,
             },
             0.2
@@ -114,7 +124,12 @@ function Projects() {
     <div className={app.home} id="projects">
       <div className={projects.projects}>
         <div style={{ overflow: "hidden" }}>
-          <h1 className={variables.title_solid}>Projects</h1>
+          <h1
+            className={variables.title_solid}
+            ref={(el) => (projectTitle = el)}
+          >
+            Projects
+          </h1>
         </div>
         {projectsData.map((project) => (
           <div

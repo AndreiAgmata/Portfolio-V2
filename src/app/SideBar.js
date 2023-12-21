@@ -8,13 +8,18 @@ import { FaLinkedin } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useEffect, useRef, useState } from "react";
 
-import { Power3 } from "gsap";
+import { Power3, Expo } from "gsap";
 import gsap from "gsap";
 
 export default function SideBar() {
   const [show, setShow] = useState(false);
+  const [logo, setLogo] = useState("./logo-white.png");
   const [iconColor, setIconColor] = useState("white");
   let menuBar = useRef();
+  let logoRef = useRef();
+  let burgerRef = useRef();
+  let links = useRef();
+  let icons = useRef();
   const tl = new gsap.timeline();
 
   const handleClick = () => {
@@ -22,11 +27,40 @@ export default function SideBar() {
 
     if (window.innerWidth < 850) {
       if (show) {
-        tl.to(menuBar, { xPercent: 100, ease: Power3.easeOut });
-        setIconColor("white");
+        //hide
+        tl.to(menuBar, 1, { yPercent: -1, ease: Power3.out });
+        setTimeout(function () {
+          setIconColor("white");
+          setLogo("./logo-white.png");
+        }, 800);
       } else {
-        tl.to(menuBar, { xPercent: -100, ease: Power3.easeOut });
-        setIconColor("black");
+        //show
+        tl
+          .to(menuBar, 0.7, { yPercent: 100, ease: Power3.out })
+          .staggerFrom(
+            [
+              links.children[0],
+              links.children[1],
+              links.children[2],
+              links.children[3],
+            ],
+            0.5,
+            { opacity: 0, ease: Power3.easeIn },
+            0.15,
+            0.2
+          )
+          .from(
+            [
+              icons.children[0],
+              icons.children[1],
+              icons.children[2],
+              icons.children[3],
+            ],
+            1,
+            { opacity: 0, ease: Power3.easeIn }
+          ),
+          setIconColor("black");
+        setLogo("./logo.png");
       }
     }
   };
@@ -34,11 +68,13 @@ export default function SideBar() {
   return (
     <>
       <div className={sidebar.burgerContainer} id="burgerContainer">
+        <img src={logo} alt="logo" ref={(el) => (logoRef = el)}></img>
         <GiHamburgerMenu
           color={iconColor}
           size="2em"
           onClick={handleClick}
           style={{ cursor: "pointer" }}
+          ref={(el) => (burgerRef = el)}
         />
       </div>
       <div className={`${sidebar.sidebar}`} ref={(el) => (menuBar = el)}>
@@ -48,13 +84,13 @@ export default function SideBar() {
               <img src="/logo.png" alt="logo"></img>
             </NavLink>
           </div>
-          <div className={sidebar.links}>
+          <div className={sidebar.links} ref={(el) => (links = el)}>
             <NavLink
               className={sidebar.link}
               href="#projects"
               onClick={handleClick}
             >
-              PROJECTS
+              <span>PROJECTS</span>
             </NavLink>
             <NavLink
               className={sidebar.link}
@@ -78,7 +114,7 @@ export default function SideBar() {
               CONTACT
             </NavLink>
           </div>
-          <div className={sidebar.icons}>
+          <div className={sidebar.icons} ref={(el) => (icons = el)}>
             <NavLink className={sidebar.icon}>
               <TiSocialInstagramCircular
                 size="2.5em"

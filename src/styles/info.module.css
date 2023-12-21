@@ -63,17 +63,18 @@
 }
 .aboutContainer .about .headerContainer {
   width: 100%;
+  overflow: hidden;
+  margin-bottom: 5rem;
 }
 .aboutContainer .about .headerContainer h1 {
   width: 50%;
   text-align: center;
-  margin-bottom: 5rem;
 }
 @media (max-width: 850px) {
   .aboutContainer .about .headerContainer h1 {
     width: 100%;
     color: #131313;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 .aboutContainer .about .infoWrapper {

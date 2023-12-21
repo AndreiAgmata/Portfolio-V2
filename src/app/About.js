@@ -22,16 +22,48 @@ import { FaSwift } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 import Image from "next/image";
 import memoji from "../../public/memoji2.png";
+import gsap from "gsap";
+import { Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
+  let aboutTitle = useRef();
+  let aboutCard = useRef();
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      const tl = new gsap.timeline({
+        scrollTrigger: {
+          trigger: aboutTitle,
+          start: "top center+=400",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      tl.from(aboutTitle, 0.7, {
+        yPercent: 100,
+        ease: Power3.easeOut,
+      }).from(aboutCard, 1, { opacity: 0, ease: Power3.easeOut });
+    });
+
+    return () => ctx.revert();
+  });
   return (
     <div className={app.home} id="about">
       <div className={info.aboutContainer}>
         <div className={info.about}>
           <div className={info.headerContainer}>
-            <h1 className={variables.title_solid}>About Me</h1>
+            <h1
+              ref={(el) => (aboutTitle = el)}
+              className={variables.title_solid}
+            >
+              About Me
+            </h1>
           </div>
-          <div className={info.infoWrapper}>
+
+          <div className={info.infoWrapper} ref={(el) => (aboutCard = el)}>
             <div className={info.info}>
               <p>
                 I am a passionate advocate for user-centric design, driven by

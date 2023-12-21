@@ -25,7 +25,7 @@
         
         @media (max-width: 850px) {
             width: 100%;
-            font-size: 3rem;
+            font-size: 4rem;
            }
     }
 
@@ -54,15 +54,18 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
-
-                @media (max-width: 850px) {
-                    // padding-left: 1rem;
-                    // padding-right: 1rem;
-                   }
+                
+               
     
                 h2{
                     font-size: 3rem;
+                    font-weight: 600;
                     color: white;
+
+                    @media (max-width: 850px) {
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                       }
                 }
             }
     
@@ -77,11 +80,13 @@
                     overflow: hidden;
                     h1{
                         width: 100%;
-                        
                         font-size: 3rem;
+                        font-weight: 600;
                         text-align: start;
     
                         @media (max-width: 850px) {
+                            font-size: 2.5rem;
+                            font-weight: 700;
                             text-align: start;
                            }
                     }
@@ -159,7 +164,9 @@
                            }
                         
 
-                        btn{
+                        button{
+                            border-radius: 0;
+
                             @media (max-width: 850px) {
                                 width: 100%;
                                }
@@ -206,6 +213,8 @@
        
 
         .viewMore{
+
+            border-radius: 0;
 
             @media (max-width: 850px) {
                 width: 80%;

@@ -7,6 +7,11 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
+import gsap from "gsap";
+import { Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -23,6 +28,28 @@ function Contact() {
       [name]: value,
     }));
   };
+
+  let contactHeader = useRef();
+  let yoyo = useRef();
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      const tl = new gsap.timeline({
+        scrollTrigger: {
+          trigger: contactHeader,
+          start: "top center+=100",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      tl.from(contactHeader, 0.7, {
+        scale: 0.9,
+        ease: Power3.easeOut,
+      });
+    });
+
+    return () => ctx.revert();
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,7 +83,12 @@ function Contact() {
     <>
       <div className={app.home} id="contact">
         <div className={contact.contact}>
-          <h1 className={variables.title_solid_dark}>Reach out, lets talk!</h1>
+          <h1
+            className={variables.title_solid_dark}
+            ref={(el) => (contactHeader = el)}
+          >
+            Reach out, lets talk!
+          </h1>
           <div className={contact.socialMedia}>
             <FaInstagramSquare
               size="3em"
@@ -81,7 +113,7 @@ function Contact() {
           </div>
           <div className={contact.formWrapper}>
             <div className={contact.formContainer}>
-              <h2>Send Me a Message</h2>
+              <h2 ref={(el) => (yoyo = el)}>Send Me a Message</h2>
               <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="name">
                   <Form.Label>Name:</Form.Label>

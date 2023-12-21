@@ -60,7 +60,7 @@
 @media (max-width: 850px) {
   .projects h1 {
     width: 100%;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 .projects .projectContainer {
@@ -93,7 +93,14 @@
 }
 .projects .projectContainer .projectInfo .sideBar h2 {
   font-size: 3rem;
+  font-weight: 600;
   color: white;
+}
+@media (max-width: 850px) {
+  .projects .projectContainer .projectInfo .sideBar h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
 }
 .projects .projectContainer .projectInfo .content {
   width: 80%;
@@ -110,10 +117,13 @@
 .projects .projectContainer .projectInfo .content .titleWrapper h1 {
   width: 100%;
   font-size: 3rem;
+  font-weight: 600;
   text-align: start;
 }
 @media (max-width: 850px) {
   .projects .projectContainer .projectInfo .content .titleWrapper h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
     text-align: start;
   }
 }
@@ -178,8 +188,11 @@
     flex-direction: column;
   }
 }
+.projects .projectContainer .projectInfo .content .details .buttons button {
+  border-radius: 0;
+}
 @media (max-width: 850px) {
-  .projects .projectContainer .projectInfo .content .details .buttons btn {
+  .projects .projectContainer .projectInfo .content .details .buttons button {
     width: 100%;
   }
 }
@@ -215,6 +228,9 @@
     width: 100%;
     align-items: center;
   }
+}
+.projects .viewMoreWrapper .viewMore {
+  border-radius: 0;
 }
 @media (max-width: 850px) {
   .projects .viewMoreWrapper .viewMore {

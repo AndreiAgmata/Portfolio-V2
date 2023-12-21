@@ -94,7 +94,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  height : 100%;
+
   position : fixed;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;

@@ -36,6 +36,7 @@
 
 .projects {
   min-height: 100vh;
+  height: 100%;
   width: 100vw;
   padding-top: 6rem;
   padding-bottom: 10rem;

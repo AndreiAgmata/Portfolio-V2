@@ -16,7 +16,6 @@
 
 .left{
     min-height: 100vh;
-   
     width: 50vw;
     background-color: $color-Dark;
     display: flex;
@@ -25,7 +24,7 @@
     align-items: center;
 
     @media (max-width: 850px) {
-        height: var(--doc-height);
+        height: 100vh;
         width: 100vw;
         align-items: center;
         align-items: flex-start;

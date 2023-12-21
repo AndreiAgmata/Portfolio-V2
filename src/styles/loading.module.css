@@ -35,7 +35,7 @@
 }
 
 .loading {
-  min-height: 100vh;
+  height: 100dvh;
   width: 100vw;
   background-color: #fbfb3e;
   position: fixed;

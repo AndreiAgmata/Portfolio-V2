@@ -25,10 +25,12 @@
     background-color: $color-yellow;
     width: 7%;
     height: 100vh;
+    height: 100%;
     position: fixed;
     @media (max-width: 850px) {
        width: 100vw;
        z-index: 99;
+       padding-top: 7rem;
        top: -100%;
       }
 
@@ -109,6 +111,7 @@
             margin-bottom: 2rem;
 
             @media (max-width: 850px) {
+                margin-top: 4rem;
                 height: 0;
                 flex-direction: row;
                 gap: 2rem;

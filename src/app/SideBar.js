@@ -28,15 +28,14 @@ export default function SideBar() {
     if (window.innerWidth < 850) {
       if (show) {
         //hide
-        tl.to(menuBar, 1, { yPercent: -1, ease: Power3.out });
+        tl.to(menuBar, 1, { yPercent: -1, ease: Power3.easeInOut });
         setTimeout(function () {
           setIconColor("white");
           setLogo("./logo-white.png");
-        }, 800);
+        }, 700);
       } else {
         //show
-        tl
-          .to(menuBar, 0.7, { yPercent: 100, ease: Power3.out })
+        tl.to(menuBar, 0.7, { yPercent: 100, ease: Power3.out })
           .staggerFrom(
             [
               links.children[0],
@@ -58,8 +57,8 @@ export default function SideBar() {
             ],
             1,
             { opacity: 0, ease: Power3.easeIn }
-          ),
-          setIconColor("black");
+          );
+        setIconColor("black");
         setLogo("./logo.png");
       }
     }

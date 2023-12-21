@@ -1,7 +1,7 @@
 @import "./variables.module.scss";
 
 .loading{
-    min-height: 100vh;
+    height: 100dvh;
     width: 100vw;
     background-color: $color-yellow;
     position: fixed;

@@ -7,7 +7,8 @@
       "role": "Lead Frontend developer, Assistant backend developer",
       "image": "/MentorMatch.png",
       "productionLink": "https://prj-566-666-naa-team-01.vercel.app",
-      "githubLink": "https://github.com/AndreiAgmata/MentorMatch"
+      "githubLink": "https://github.com/AndreiAgmata/MentorMatch",
+      "deployed" : "true"
     },
 
     {
@@ -18,6 +19,7 @@
         "role": "Full Stack Developer",
         "image": "/Fragments.png",
         "productionLink": "",
-        "githubLink": "https://github.com/AndreiAgmata/fragments"
+        "githubLink": "https://github.com/AndreiAgmata/fragments",
+        "deployed" : "false"
     }
   ]

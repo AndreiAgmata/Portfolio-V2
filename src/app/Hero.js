@@ -29,7 +29,7 @@ function Hero() {
         0.6,
         {
           yPercent: 100,
-          opacity: 0,
+
           ease: Power3.easeOut,
           delay: 3.6,
         },
@@ -43,14 +43,14 @@ function Hero() {
             text.children[3],
           ],
           0.8,
-          { xPercent: -100, opacity: 0, ease: Power3.easeOut },
+          { xPercent: -100, ease: Power3.easeOut },
           0.15
         )
         .staggerFrom(
           [buttons.children[0].children[0], buttons.children[1].children[0]],
           1,
           {
-            opacity: 0,
+            scale: 0,
             ease: Power3.easeOut,
           },
           0.3

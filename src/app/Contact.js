@@ -38,7 +38,7 @@ function Contact() {
         scrollTrigger: {
           trigger: contactHeader,
           start: "top center+=100",
-          toggleActions: "play none none reverse",
+          // toggleActions: "play none none reverse",
         },
       });
 
@@ -113,7 +113,7 @@ function Contact() {
           </div>
           <div className={contact.formWrapper}>
             <div className={contact.formContainer}>
-              <h2 ref={(el) => (yoyo = el)}>Send Me a Message</h2>
+              <h2 ref={(el) => (yoyo = el)}>Send Me a Message!</h2>
               <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="name">
                   <Form.Label>Name:</Form.Label>

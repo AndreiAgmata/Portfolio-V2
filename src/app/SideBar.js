@@ -20,10 +20,15 @@ export default function SideBar() {
   let burgerRef = useRef();
   let links = useRef();
   let icons = useRef();
-  const tl = new gsap.timeline();
+  let bgRef = useRef();
+  let burgerBgRef = useRef();
+  let burgerContainerRef = useRef();
 
   const handleClick = () => {
     setShow(!show);
+
+    const tl = new gsap.timeline();
+    let q = gsap.utils.selector(burgerContainerRef);
 
     if (window.innerWidth < 850) {
       if (show) {
@@ -35,46 +40,113 @@ export default function SideBar() {
         }, 700);
       } else {
         //show
-        tl.to(menuBar, 0.7, { yPercent: 100, ease: Power3.out })
-          .staggerFrom(
-            [
-              links.children[0],
-              links.children[1],
-              links.children[2],
-              links.children[3],
-            ],
-            0.5,
-            { opacity: 0, ease: Power3.easeIn },
-            0.15,
-            0.2
-          )
-          .from(
-            [
-              icons.children[0],
-              icons.children[1],
-              icons.children[2],
-              icons.children[3],
-            ],
-            1,
-            { opacity: 0, ease: Power3.easeIn }
-          );
-        setIconColor("black");
-        setLogo("./logo.png");
+        tl.to(
+          menuBar,
+          0.7,
+          { yPercent: 100, ease: Power3.out },
+          0.1
+        ).staggerFrom(
+          [
+            links.children[0],
+            links.children[1],
+            links.children[2],
+            links.children[3],
+            icons,
+          ],
+          0.5,
+          { opacity: 0, ease: Power3.easeIn },
+          0.15,
+          0.2
+        );
+        setTimeout(function () {
+          setIconColor("black");
+          setLogo("./logo.png");
+        }, 150);
       }
     }
   };
 
+  useEffect(() => {
+    const ctx = new gsap.context(() => {
+      let q = gsap.utils.selector(burgerContainerRef);
+      let q2 = gsap.utils.selector(bgRef);
+      const tl = new gsap.timeline({
+        scrollTrigger: {
+          trigger: burgerBgRef,
+          start: "top top",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      const tl2 = new gsap.timeline({
+        scrollTrigger: {
+          trigger: burgerBgRef,
+          start: "top top",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      tl.to(bgRef, 0.7, { top: 0, ease: Power3.easeInOut }).to(
+        [q("#logo"), q("#burger")],
+        0.2,
+        { yPercent: -100, ease: Power3.easeIn },
+        0.2
+      );
+
+      tl2.staggerFrom([q2("#logo"), q2("#burger")], 0.6, {
+        yPercent: 100,
+        ease: Power3.easeInOut,
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <>
-      <div className={sidebar.burgerContainer} id="burgerContainer">
-        <img src={logo} alt="logo" ref={(el) => (logoRef = el)}></img>
-        <GiHamburgerMenu
-          color={iconColor}
-          size="2em"
-          onClick={handleClick}
-          style={{ cursor: "pointer" }}
-          ref={(el) => (burgerRef = el)}
-        />
+      <div className={sidebar.burgerAlt} ref={(el) => (bgRef = el)}>
+        <div style={{ overflow: "hidden" }} className={sidebar.altLogoWrapper}>
+          <img src="./logo.png" alt="logo" id="logo"></img>
+        </div>
+        <div
+          style={{ overflow: "hidden" }}
+          className={sidebar.altBurgerWrapper}
+        >
+          <GiHamburgerMenu
+            color="black"
+            size="2em"
+            onClick={handleClick}
+            style={{ cursor: "pointer" }}
+            id="burger"
+          />
+        </div>
+      </div>
+      <div
+        className={sidebar.burgerBgRef}
+        ref={(el) => (burgerBgRef = el)}
+      ></div>
+      <div
+        className={sidebar.burgerContainer}
+        id="burgerContainer"
+        ref={(el) => (burgerContainerRef = el)}
+      >
+        <div style={{ overflow: "hidden" }}>
+          <img
+            src={logo}
+            alt="logo"
+            ref={(el) => (logoRef = el)}
+            id="logo"
+          ></img>
+        </div>
+        <div style={{ overflow: "hidden" }}>
+          <GiHamburgerMenu
+            color={iconColor}
+            size="2em"
+            onClick={handleClick}
+            style={{ cursor: "pointer" }}
+            id="burger"
+          />
+        </div>
       </div>
       <div className={`${sidebar.sidebar}`} ref={(el) => (menuBar = el)}>
         <Navbar className={`${sidebar.navbar}`}>

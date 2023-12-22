@@ -38,7 +38,7 @@ function About() {
         scrollTrigger: {
           trigger: aboutTitle,
           start: "top center+=400",
-          toggleActions: "play none none reverse",
+          // toggleActions: "play none none reverse",
         },
       });
 

@@ -17,7 +17,7 @@ function Skills() {
         scrollTrigger: {
           trigger: skillsTitle,
           start: "top center+=400",
-          toggleActions: "play none none reverse",
+          // toggleActions: "play none none reverse",
         },
       });
 
@@ -30,7 +30,7 @@ function Skills() {
           scrollTrigger: {
             trigger: q(`#row${j + 1}`),
             start: "top center+=200",
-            toggleActions: "play none none reverse",
+            // toggleActions: "play none none reverse",
           },
         });
 
@@ -99,7 +99,7 @@ function Skills() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <h1 className={variables.title_solid_black} id="header2">
-                Optimized Backend System
+                Solid Backend Understanding
               </h1>
             </div>
             <p id="details2">

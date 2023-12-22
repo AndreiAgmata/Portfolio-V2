@@ -29,7 +29,7 @@ function Projects() {
         scrollTrigger: {
           trigger: projectTitle,
           start: "top center+=400",
-          toggleActions: "play none none reverse",
+          // toggleActions: "play none none reverse",
         },
       });
 
@@ -40,12 +40,16 @@ function Projects() {
           scrollTrigger: {
             trigger: projectRef,
             start: "top center+=200",
-            toggleActions: "play none none reverse",
           },
         });
 
         let q = gsap.utils.selector(projectRef);
-
+        let buttons = [];
+        if (q("#button1").length === 0) {
+          buttons = [q("#button2")];
+        } else {
+          buttons = [q("#button1"), q("#button2")];
+        }
         tl.from(q("#project-num"), {
           xPercent: -100,
 
@@ -98,6 +102,14 @@ function Projects() {
             },
             0.5
           )
+          .from(
+            q("#mobileImg"),
+            {
+              xPercent: -100,
+              ease: Power3.easeOut,
+            },
+            0.5
+          )
           .from(q("#hLine1"), {
             width: 0,
             ease: Power3.easeOut,
@@ -113,6 +125,15 @@ function Projects() {
               ease: Power3.easeOut,
             },
             1
+          )
+          .staggerFrom(
+            buttons,
+            1,
+            {
+              scale: 0,
+              ease: Power3.easeOut,
+            },
+            0.15
           );
       });
     });
@@ -153,8 +174,15 @@ function Projects() {
                 </div>
                 <div className={projects.details}>
                   <p id="details">{project.details}</p>
-                  <div className={projects.mobileImg}>
-                    <img src={project.image} alt="Project Image"></img>
+                  <div
+                    className={projects.mobileImg}
+                    style={{ overflow: "hidden" }}
+                  >
+                    <img
+                      src={project.image}
+                      alt="Project Image"
+                      id="mobileImg"
+                    ></img>
                     <div className={projects.overlay}></div>
                   </div>
                   <div className={projects.role} style={{ overflow: "hidden" }}>
@@ -164,21 +192,36 @@ function Projects() {
                     </p>
                     <div className={projects.horizontalline} id="hLine2"></div>
                   </div>
-                  <div className={projects.buttons}>
-                    <Button
-                      size="lg"
-                      onClick={() => window.open(project.productionLink)}
-                    >
-                      Go to Project
-                    </Button>
-                    <Button
-                      size="lg"
-                      variant="outline-light"
-                      onClick={() => window.open(project.githubLink)}
-                    >
-                      View Code
-                    </Button>
-                  </div>
+                  {project.deployed === "true" ? (
+                    <div className={projects.buttons}>
+                      <Button
+                        size="lg"
+                        onClick={() => window.open(project.productionLink)}
+                        id="button1"
+                      >
+                        Go to Project
+                      </Button>
+                      <Button
+                        size="lg"
+                        variant="outline-light"
+                        onClick={() => window.open(project.githubLink)}
+                        id="button2"
+                      >
+                        View Code
+                      </Button>
+                    </div>
+                  ) : (
+                    <div className={projects.buttons}>
+                      <Button
+                        size="lg"
+                        variant="outline-light"
+                        onClick={() => window.open(project.githubLink)}
+                        id="button2"
+                      >
+                        View Code
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

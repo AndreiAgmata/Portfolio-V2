@@ -6,7 +6,7 @@ $color-Dark : #131313;
     font-weight: 800;
     // font-size: 4.5rem;
     font-size: clamp(1rem,1rem + 4vw,4rem);
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px white;
     color: $color-Dark; 
     margin-bottom: 0;
 }

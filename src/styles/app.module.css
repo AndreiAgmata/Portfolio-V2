@@ -1,7 +1,7 @@
 .title_stroke {
   font-weight: 800;
   font-size: clamp(1rem, 1rem + 4vw, 4rem);
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 2px white;
   color: #131313;
   margin-bottom: 0;
 }
@@ -83,7 +83,7 @@
 }
 .left section .text p {
   color: white;
-  font-weight: 500;
+  font-weight: 200;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   margin-top: -1rem;
 }

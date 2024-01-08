@@ -49,7 +49,7 @@ function Contact() {
     });
 
     return () => ctx.revert();
-  });
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

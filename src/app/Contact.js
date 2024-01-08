@@ -127,24 +127,24 @@ function Contact() {
                 </Form.Group>
                 <Row>
                   <Col md={6}>
-                    <Form.Group controlId="phone">
-                      <Form.Label>Phone Number:</Form.Label>
-                      <Form.Control
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                      />
-                    </Form.Group>
-                  </Col>
-                  <Col md={6}>
                     <Form.Group controlId="email">
                       <Form.Label>Email:</Form.Label>
                       <Form.Control
                         type="email"
                         name="email"
                         value={formData.email}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group controlId="phone">
+                      <Form.Label>Phone Number:</Form.Label>
+                      <Form.Control
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
                         onChange={handleChange}
                         required
                       />

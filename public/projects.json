@@ -1,6 +1,18 @@
 [
-    {
+    { 
       "id": "01",
+      "title": "Stampd",
+      "sub": "Modern Customer Loyalty Solution",
+      "details": "Stampd, a cross-platform app, reimagines traditional Buy X Get Y loyalty cards. Clients effortlessly accumulate stamps by scanning a unique QR code, streamlining reward tracking. For business owners, Stampd provides efficient tools to drive engagement and growth, bridging user convenience with technological advancement in loyalty programs.",
+      "role": "Full Stack Developer",
+      "image": "/Fragments.png",
+      "productionLink": "",
+      "githubLink": "https://github.com/AndreiAgmata/stampd",
+      "deployed" : "true"
+    },
+
+    {
+      "id": "02",
       "title": "Mentor Match",
       "sub": "Full-stack tutoring application",
       "details": "A comprehensive mentoring platform featuring seamless integration of chat, payment capabilities, and an advanced scheduling system, ensuring a fully functional and cohesive user experience.",
@@ -12,14 +24,16 @@
     },
 
     {
-        "id": "02",
-        "title": "Fragments",
-        "sub": "Cloud-based microservice application",
-        "details": "Robust and adaptable platform uniquely tailored for processing text fragments and images. Harnessing the vast array of AWS services, this application has been meticulously developed to guarantee exceptional scalability, reliability, and efficiency",
-        "role": "Full Stack Developer",
-        "image": "/Fragments.png",
-        "productionLink": "",
-        "githubLink": "https://github.com/AndreiAgmata/fragments",
-        "deployed" : "false"
+      "id": "03",
+      "title": "Fragments",
+      "sub": "Cloud-based microservice application",
+      "details": "Robust and adaptable platform uniquely tailored for processing text fragments and images. Harnessing the vast array of AWS services, this application has been meticulously developed to guarantee exceptional scalability, reliability, and efficiency",
+      "role": "Full Stack Developer",
+      "image": "/Fragments.png",
+      "productionLink": "",
+      "githubLink": "https://github.com/AndreiAgmata/fragments",
+      "deployed" : "false"
     }
-  ]
+
+    
+]

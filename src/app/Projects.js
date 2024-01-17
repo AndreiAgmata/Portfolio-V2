@@ -2,13 +2,12 @@ import Button from "../../node_modules/react-bootstrap/esm/Button";
 import app from "../styles/app.module.scss";
 import projects from "../styles/projects.module.scss";
 import variables from "../styles/variables.module.scss";
-import Image from "next/image";
-import Mentor from "../../public/MentorMatch.png";
 import projectsData from "../../public/projects.json";
 import gsap from "gsap";
 import { Power3 } from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CldImage } from "next-cloudinary";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -231,6 +230,7 @@ function Projects() {
             >
               <div className={projects.imageWrapper} id="image">
                 <img alt="Project Image" src={project.image}></img>
+                {/* <CldImage width="600" height="600" src={project.image} /> */}
               </div>
             </div>
           </div>

@@ -39,6 +39,7 @@ function Projects() {
           scrollTrigger: {
             trigger: projectRef,
             start: "top center+=200",
+            markers: true,
             // toggleActions: "play none none reverse",
           },
         });
@@ -105,7 +106,8 @@ function Projects() {
           .from(
             q("#mobileImg"),
             {
-              xPercent: -100,
+              opacity: 0,
+              y: 30,
               ease: Power3.easeOut,
             },
             0.5
@@ -227,8 +229,8 @@ function Projects() {
               className={projects.imageSection}
               style={{ overflow: "hidden" }}
             >
-              <div className={projects.imageWrapper}>
-                <img alt="Project Image" src={project.image} id="image"></img>
+              <div className={projects.imageWrapper} id="image">
+                <img alt="Project Image" src={project.image}></img>
               </div>
             </div>
           </div>

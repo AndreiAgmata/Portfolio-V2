@@ -39,7 +39,7 @@ function Projects() {
           scrollTrigger: {
             trigger: projectRef,
             start: "top center+=200",
-            markers: true,
+            // markers: true,
             // toggleActions: "play none none reverse",
           },
         });

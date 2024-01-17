@@ -154,19 +154,22 @@
   display: none;
   margin-top: 3rem;
   margin-bottom: 5rem;
+  background-color: rgba(255, 255, 255, 0.0274509804);
+  padding: 2rem;
+  border-radius: 0.75rem;
 }
 @media (max-width: 850px) {
   .projects .projectContainer .projectInfo .content .details .mobileImg {
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .projects .projectContainer .projectInfo .content .details .mobileImg img {
-  border-radius: 1rem;
-  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.4);
-  max-width: 100%;
+  margin-left: -0.7rem;
+  max-width: 110%;
   height: auto;
-  display: block;
 }
 .projects .projectContainer .projectInfo .content .details .role {
   margin-top: 10rem;
@@ -215,8 +218,7 @@
 }
 .projects .projectContainer .imageSection img {
   border-radius: 1rem;
-  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.4);
-  max-width: 70%;
+  max-width: 80%;
   height: auto;
 }
 .projects .viewMoreWrapper {

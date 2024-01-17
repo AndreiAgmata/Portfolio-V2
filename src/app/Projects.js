@@ -29,7 +29,6 @@ function Projects() {
         scrollTrigger: {
           trigger: projectTitle,
           start: "top center+=400",
-          // toggleActions: "play none none reverse",
         },
       });
 
@@ -40,6 +39,7 @@ function Projects() {
           scrollTrigger: {
             trigger: projectRef,
             start: "top center+=200",
+            toggleActions: "play none none reverse",
           },
         });
 
@@ -69,8 +69,8 @@ function Projects() {
           .from(
             q("#image"),
             {
-              scale: 0,
-
+              opacity: 0,
+              y: 30,
               ease: Power3.easeOut,
             },
             0.2
@@ -130,7 +130,8 @@ function Projects() {
             buttons,
             1,
             {
-              scale: 0,
+              opacity: 0,
+              y: 30,
               ease: Power3.easeOut,
             },
             0.15
@@ -177,12 +178,9 @@ function Projects() {
                   <div
                     className={projects.mobileImg}
                     style={{ overflow: "hidden" }}
+                    id="mobileImg"
                   >
-                    <img
-                      src={project.image}
-                      alt="Project Image"
-                      id="mobileImg"
-                    ></img>
+                    <img src={project.image} alt="Project Image"></img>
                     <div className={projects.overlay}></div>
                   </div>
                   <div className={projects.role} style={{ overflow: "hidden" }}>

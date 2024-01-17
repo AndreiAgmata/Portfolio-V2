@@ -122,18 +122,22 @@
                         display: none;
                         margin-top: 3rem;
                         margin-bottom: 5rem;
-
+                        background-color: #ffffff07;
+                        padding: 2rem;
+                        border-radius: 0.75rem;
+                        
                         @media (max-width: 850px) {
                             position: relative;
-                            display: inline-block;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                            }
 
                            img{
-                            border-radius: 1rem;
-                            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.4);
-                            max-width:100%;
+                            margin-left: -0.7rem;
+                            max-width:110%;
                             height: auto;
-                            display: block;
+                           
                            }
 
                            
@@ -194,7 +198,7 @@
             }
                 img{
                     border-radius: 1rem;
-                    max-width: 70%;
+                    max-width: 80%;
                     height: auto;
                 }
            

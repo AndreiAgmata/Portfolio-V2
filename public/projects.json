@@ -1,12 +1,12 @@
 [
     { 
       "id": "01",
-      "title": "Stampd",
+      "title": "stampd",
       "sub": "Modern Customer Loyalty Solution",
-      "details": "A cross-platform app that reimagines traditional Buy X Get Y loyalty cards.",
+      "details": "Stampd, a cross-platform app, reimagines traditional Buy X Get Y loyalty cards. Clients effortlessly accumulate stamps by scanning a unique QR code, streamlining reward tracking. For business owners, Stampd provides efficient tools to drive engagement and growth, bridging user convenience with technological advancement in loyalty programs.",
       "role": "Full Stack Developer",
-      "image": "/Fragments.png",
-      "productionLink": "",
+      "image": "/Stampd.png",
+      "productionLink": "https://stampd.ca",
       "githubLink": "https://github.com/AndreiAgmata/stampd",
       "deployed" : "true"
     },

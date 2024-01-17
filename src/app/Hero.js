@@ -48,9 +48,10 @@ function Hero() {
         )
         .staggerFrom(
           [buttons.children[0].children[0], buttons.children[1].children[0]],
-          1,
+          0.5,
           {
-            scale: 0,
+            opacity: 0,
+            y: 10,
             ease: Power3.easeOut,
           },
           0.3
@@ -94,7 +95,7 @@ function Hero() {
           </div>
 
           <div className={app.heroButtons} ref={(el) => (buttons = el)}>
-            <div style={{ overflow: "hidden" }}>
+            <div>
               <Button
                 size="lg"
                 onClick={() => (window.location.href = "#contact")}
@@ -102,7 +103,7 @@ function Hero() {
                 Get in Touch
               </Button>
             </div>
-            <div style={{ overflow: "hidden" }}>
+            <div>
               <Button
                 size="lg"
                 variant="outline-light"

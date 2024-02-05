@@ -16,6 +16,11 @@ function Hero() {
 
   const tl = new gsap.timeline();
 
+  const openResume = () => {
+    const pdfUrl = "AndreiAgmata-RESUME.pdf"; // Replace with the actual path to your PDF file
+    window.open(pdfUrl, "_blank");
+  };
+
   useEffect(() => {
     let headerFirst = header.children[0].children[0];
     let headerSecond = headerFirst.nextSibling;
@@ -96,11 +101,8 @@ function Hero() {
 
           <div className={app.heroButtons} ref={(el) => (buttons = el)}>
             <div>
-              <Button
-                size="lg"
-                onClick={() => (window.location.href = "#contact")}
-              >
-                Get in Touch
+              <Button size="lg" onClick={openResume}>
+                Resume
               </Button>
             </div>
             <div>

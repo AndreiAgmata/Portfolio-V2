@@ -101,7 +101,7 @@ function Hero() {
 
           <div className={app.heroButtons} ref={(el) => (buttons = el)}>
             <div>
-              <Button size="lg" onClick={openResume} style={{ width: "11rem" }}>
+              <Button size="lg" onClick={openResume}>
                 Resume
               </Button>
             </div>
@@ -110,7 +110,6 @@ function Hero() {
                 size="lg"
                 variant="outline-light"
                 onClick={() => (window.location.href = "#projects")}
-                style={{ width: "11rem" }}
               >
                 See my work
               </Button>

@@ -105,6 +105,7 @@
 }
 .left section .heroButtons button {
   border-radius: 0;
+  width: 11rem;
 }
 @media (max-width: 850px) {
   .left section .heroButtons button {

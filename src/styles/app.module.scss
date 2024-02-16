@@ -66,6 +66,7 @@
             flex-direction: row;
             gap: 1rem;
             margin-top: 1rem;
+            
 
             @media (max-width: 850px) {
                flex-direction: column;
@@ -78,7 +79,7 @@
 
             button{
                 border-radius: 0;
-                
+                width: 11rem;
 
                 @media (max-width: 850px) {
                     width: 100%;

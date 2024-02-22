@@ -17,7 +17,7 @@ function Hero() {
   const tl = new gsap.timeline();
 
   const openResume = () => {
-    const pdfUrl = "AndreiAgmata-RESUME.pdf"; // Replace with the actual path to your PDF file
+    const pdfUrl = "Andrei Agmata - Resume.pdf";
     window.open(pdfUrl, "_blank");
   };
 
